@@ -40,7 +40,7 @@ export default function NewItem() {
             onChange={(e) => setName(e.target.value)}
             required
             className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
-            placeholder="Enter item name..."
+            placeholder="Enter item name...."
           />
         </div>
 
