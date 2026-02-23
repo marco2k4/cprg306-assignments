@@ -2,22 +2,46 @@
 
 import { useState } from "react";
 
-export default function NewItem() {
+export default function NewItem({ onAddItem }) {
+  // Initialize state variables
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [category, setCategory] = useState("produce");
 
+  // Define categories array (programmatic approach)
   const categories = [
-    "produce", "dairy", "bakery", "meat", "frozen foods",
-    "canned goods", "dry goods", "beverages", "snacks", 
-    "household", "other"
+    "produce",
+    "dairy", 
+    "bakery", 
+    "meat", 
+    "frozen foods",
+    "canned goods", 
+    "dry goods", 
+    "beverages", 
+    "snacks", 
+    "household", 
+    "other"
   ];
 
+  // Handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
-    const item = { name, quantity, category };
-    console.log(item);
-    alert(`Added: ${name}, quantity: ${quantity}, category: ${category}`);
+
+    // Generate a random id for the new item
+    const id = Math.random().toString(36).substring(2, 9);
+
+    // Create item object with id
+    const item = {
+      id: id,
+      name: name,
+      quantity: quantity,
+      category: category
+    };
+
+    // Call the function passed as prop
+    onAddItem(item);
+
+    // Reset form
     setName("");
     setQuantity(1);
     setCategory("produce");
@@ -62,7 +86,7 @@ export default function NewItem() {
             />
           </div>
 
-          {/* Category Field - Programmatic */}
+          {/* Category Field - Programmatically rendered options */}
           <div className="flex-1">
             <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-1">
               Category
