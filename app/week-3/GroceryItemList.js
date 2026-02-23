@@ -1,7 +1,7 @@
 import GroceryItem from "./GroceryItem";
 
 export default function GroceryItemList() {
-  // Grocery items data - exactly as provided by professor
+  // Grocery items data - provided by professor
   const item1 = {
     name: "milk, 4 L 🥛",
     quantity: 1,
