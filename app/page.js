@@ -61,6 +61,16 @@ export default function Home() {
               View Week 6 Assignment →
             </Link>
           </div>
+          {/* WEEK 7 ADDED HERE*/}
+          <div className="p-4 border border-gray-200 rounded-lg">
+            <h3 className="text-lg font-medium mb-2">Week 7</h3>
+            <Link 
+              href="/week-7" 
+              className="inline-block px-4 py-2 bg-yellow-600 text-white rounded hover:bg-yellow-700"
+            >
+              View Week 7 Assignment →
+            </Link>
+          </div>
         </div>
       </div>
       
