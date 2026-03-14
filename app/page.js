@@ -76,7 +76,7 @@ export default function Home() {
             <h3 className="text-lg font-medium mb-2">Week 8</h3>
             <Link 
               href="/week-8" 
-              className="inline-block px-4 py-2 bg-black-600 text-white rounded hover:bg-black-700"
+              className="inline-block px-4 py-2 bg-navy-600 text-white rounded hover:bg-navy-700"
             >
               View Week 8 Assignment →
             </Link>
